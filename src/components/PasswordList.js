@@ -7,7 +7,7 @@ const PasswordList = (props) => {
     <div className="previous-passwords">
       <h3>Previous Passwords</h3>
       <ul>
-        {props.passwordList.map((password, index) => (
+        {props.passwordList.slice(0, 5).map((password, index) => (
           <li key={index}>{password}</li>
         ))}
       </ul>
