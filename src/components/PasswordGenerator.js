@@ -39,7 +39,6 @@ const PasswordGenerator = () => {
     if (includeSpecialChars) allChars.push(SPECIAL_CHARS);
 
     if (allChars.length === 0) {
-      console.log("In no optin selected");
       setAlertMessage("Please select at least one character type.");
       setShowAlert(true);
       return;
@@ -66,7 +65,6 @@ const PasswordGenerator = () => {
   //Handles copying the generated password to the clipboard
   const copyToClipboardHandler = () => {
     if (!generatedPassword) {
-      console.log("In emptygen password");
       setAlertMessage("Please Generate a Password.");
       setShowAlert(true);
       return;
@@ -74,7 +72,6 @@ const PasswordGenerator = () => {
     navigator.clipboard
       .writeText(generatedPassword)
       .then(() => {
-        console.log("In filledgen password");
         setAlertMessage("Password copied to clipboard");
         setShowAlert(true);
       })
