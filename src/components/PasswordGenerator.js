@@ -58,7 +58,7 @@ const PasswordGenerator = () => {
     setGeneratedPassword(newPassword);
     setPreviousPasswords((previousPasswords) => [
       newPassword,
-      ...previousPasswords.slice(0, 4),
+      ...previousPasswords,
     ]);
   };
 
